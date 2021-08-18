@@ -1,0 +1,502 @@
+/*Form Style*/
+    input[type=range] {
+      -webkit-appearance: none;
+      width: 100%;
+      background: transparent;
+      display: block;
+      height: 7px
+    }
+
+    input[type=range]::-webkit-slider-thumb {
+      -webkit-appearance: none
+    }
+
+    input[type=range]:focus {
+      outline: none
+    }
+
+    input[type=range]::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      height: 30px;
+      width: 80px;
+      margin-top: -10px;
+      background: #fc9217;
+      border: 4px solid #fff;
+      border-radius: 100px;
+      cursor: pointer
+    }
+
+    input[type=range]::-moz-range-thumb {
+      height: 25px;
+      width: 80px;
+      border: 4px solid #fff;
+      border-radius: 100px;
+      background: #fc9217;
+      cursor: pointer
+    }
+
+    input[type=range]::-webkit-slider-runnable-track {
+      width: 100%;
+      height: 7px;
+      cursor: pointer;
+      box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.3);
+      background: #fff;
+      border-radius: 10px
+    }
+
+    input[type=range]:focus::-webkit-slider-runnable-track {
+      background: #fff
+    }
+
+    input[type=range]::-moz-range-track {
+      width: 100%;
+      height: 7px;
+      cursor: pointer;
+      box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.3);
+      background: #fff;
+      border-radius: 10px
+    }
+
+    .rangeslider,
+    .rangeslider__fill {
+      position: relative;
+      display: block;
+      height: 7px;
+      width: 100%;
+      box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.3);
+      border-radius: 10px;
+      background: #f8f6f6
+    }
+
+    .rangeslider__fill {
+      position: absolute;
+      background: #fc9217
+    }
+
+    .rangeslider--horizontal .rangeslider__fill {
+      top: 0;
+      height: 100%
+    }
+
+    .rangeslider--horizontal .rangeslider__handle {
+      touch-action: pan-y;
+      -ms-touch-action: pan-y
+    }
+
+    .rangeslider__handle {
+      transform: translateY(-50%);
+      top: 50%;
+      background: #fc9217;
+      color: #fff;
+      font-size: 14px;
+      line-height: 25px;
+      border: 3px solid #fff;
+      border-radius: 100px;
+      padding: 0 10px;
+      font-weight: 700;
+      width: 120px;
+      display: inline-block;
+      cursor: pointer;
+      position: absolute;
+      text-align: center
+    }
+
+    .range-value {
+      margin-top: 12px;
+      color: #fff;
+      font-weight: 700;
+      font-size: 16px;
+      font-family: Museo700, serif
+    }
+
+    .form-type-input-range label {
+      display: block;
+      margin-bottom: 20px;
+      color: #fff;
+      font-size: 18px;
+      text-align: center;
+      font-family: Museo700, serif
+    }
+
+    .not-front .range-value,
+    .not-front .form-type-input-range label {
+      color: #022bb8
+    }
+
+    .calc-slider+.calc-slider,
+    .calc-loan-info {
+      margin-top: 40px
+    }
+
+    .range {
+      display: flex;
+      justify-content: space-between
+    }
+
+    .has-js .fe-form-progress {
+      display: flex
+    }
+/*
+
+*/
+.main-container {
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+.page-header {
+    color: #022bb8;
+    text-align: center;
+}
+@media only screen and (min-width: 1200px) {
+    .main-container {
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+    .page-header {
+        font-size: 64px;
+    }
+}
+.fade {
+    opacity: 0;
+    transition: opacity 0.15s linear;
+}
+.fade.in {
+    opacity: 1;
+}
+.collapse.fade {
+    display: none;
+}
+.collapse.in {
+    display: block;
+}
+.collapsing {
+    position: relative;
+    height: 0;
+    overflow: hidden;
+    transition: height 0.35s ease;
+}
+table {
+    width: 100%;
+}
+@media (max-width: 767px) {
+    .table-responsive {
+        width: 100%;
+        overflow-x: auto;
+        overflow-y: hidden;
+        border: none;
+    }
+    .table-responsive th,
+    .table-responsive td {
+        white-space: nowrap;
+    }
+}
+th {
+    text-align: left;
+}
+.page-apply .main-container-inner {
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+.page-apply #edit-steps .block-title,
+.page-apply .info-box .block-title,
+.page-apply .content-section-title,
+.page-apply .content-section-title * {
+    font-size: 18px;
+    color: #022bb8;
+}
+.help-section .block-title {
+    color: #535555;
+}
+.info-box {
+    font-size: 14px;
+}
+.loan-tax-info {
+    margin: 20px 0 0;
+    font-size: 12px;
+}
+.tax-item-container {
+    display: flex;
+    margin: 0 0 10px;
+}
+.tax-item-container .tax-item:last-child {
+    margin: 0 0 0 20px;
+}
+@media only screen and (min-width: 768px) {
+    .loan-tax-info {
+        font-size: 13px;
+    }
+}
+@media only screen and (min-width: 992px) {
+    .page-apply .main-container-inner {
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+}
+.large-description-box {
+    padding: 20px;
+    outline: 4px solid #f49828;
+}
+.form-wrapper {
+    margin-top: 30px;
+    position: relative;
+}
+.form-wrapper:first-child {
+    margin-top: 0;
+}
+.help-section {
+    margin-top: 30px;
+}
+.content-section-title {
+    margin: 0;
+}
+@media only screen and (min-width: 992px) {
+    .form-wrapper {
+        margin-top: 40px;
+    }
+    .help-section {
+        margin: 0;
+    }
+}
+form a {
+    color: #022bb8;
+}
+[type="checkbox"],
+[type="radio"] {
+    position: absolute;
+    clip: rect(1px 1px 1px 1px);
+    overflow: hidden;
+    height: 1px;
+}
+.toggle-password {
+    position: absolute;
+    color: #425060;
+    right: 0;
+    bottom: 5px;
+    cursor: pointer;
+    padding-left: 10px;
+    z-index: 2;
+}
+.form-item {
+    position: relative;
+}
+.form-wrapper-item {
+    margin: 15px 0 0;
+}
+.form-item-terms {
+    margin: 15px 0 0;
+}
+.input-wrapper {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+.radio .input-wrapper,
+.checkbox .input-wrapper {
+    flex-direction: row;
+}
+.form-item label {
+    line-height: 17px;
+    transition: 0.2s ease all;
+}
+label {
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 1.82;
+    letter-spacing: 0.2px;
+    color: #425060;
+}
+label a {
+    display: inline-block;
+    padding: 0 3px;
+}
+.radio label,
+.checkbox label {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+.form-control {
+    order: 2;
+    display: block;
+    height: 30px;
+    width: 100%;
+    padding: 0;
+    box-shadow: none;
+    outline: none;
+    border: none;
+    border-bottom: solid 1px rgba(151, 151, 151, 0.42);
+    border-radius: 0;
+    background-color: #fff;
+    color: #43474a;
+    font-size: 16px;
+    transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+}
+select:focus,
+input:focus,
+label:focus {
+    outline: none;
+}
+.form-item-focus input:not(:placeholder-shown) ~ label {
+    font-size: 11px;
+    transform: translateY(0);
+}
+.form-item-focus input:focus ~ label {
+    font-size: 11px;
+    transform: translateY(0);
+}
+.form-disabled .inline-form-error-message {
+    display: none !important;
+}
+.show-required input:not(:placeholder-shown) ~ label .form-required,
+.show-required .is-selected ~ label .form-required,
+.show-required .is-checked label .form-required {
+    display: none !important;
+}
+select:focus ~ label,
+.form-item-focus input:focus ~ label {
+    color: #ff7b00;
+}
+.form-item-focus:not(.form-disabled) label {
+    transform: translateY(15px);
+}
+.help-block,
+.inline-form-error-message {
+    font-size: 12px;
+    line-height: 1em;
+    padding: 0;
+    display: block;
+    margin: 5px 0 0;
+    color: #737373;
+}
+.help-block:empty {
+    display: none;
+}
+.form-description {
+    margin: 10px 0 0;
+    text-align: left;
+    color: #425060;
+}
+.form-disabled .form-control,
+.form-item input[readonly] {
+    border-bottom-style: dashed;
+    color: #aaa;
+}
+.form-disabled label {
+    color: #aaa;
+}
+.form-disabled .form-required {
+    display: none;
+}
+.form-type-radios .radios-container {
+    margin: 10px 0 0;
+}
+.form-select {
+    position: relative;
+    z-index: 1;
+    padding-left: 0;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    transition: 0.2s ease all;
+    background: transparent;
+}
+.form-actions .btn,
+.form-actions .button {
+    margin: 10px 5px;
+    max-width: calc(100% - 10px);
+}
+.form-actions {
+    margin: 15px -5px -10px;
+}
+.form-required-text {
+    margin: 0 0 0 5px;
+}
+.required .form-required,
+label .form-required {
+    display: none;
+}
+label .form-required {
+    top: -2px;
+}
+.form-type-radios .input-wrapper {
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    flex-direction: row;
+    margin: 0 -15px;
+}
+.form-type-radios .input-wrapper .radio {
+    margin: 5px 15px;
+}
+[type="radio"] + label,
+[type="checkbox"] + label {
+    position: relative;
+}
+[type="radio"] + label::before,
+[type="checkbox"] + label::before {
+    content: "";
+    display: block;
+    margin-right: 5px;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    border: 2px solid rgba(255, 123, 0, 0.6);
+    cursor: pointer;
+    animation: pulse 2s ease infinite;
+    background-size: 72%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+[type="radio"] + label::before {
+    animation: none;
+    border: 2px solid rgba(255, 123, 0, 0.3);
+}
+[type="checkbox"]:checked + label::before,
+[type="radio"]:checked + label::before {
+    background-color: #ff7b00;
+    border-color: #ff7b00;
+    color: #fff;
+    animation: icon 0.2s cubic-bezier(1, 0.008, 0.565, 1.65) 0.1s 1 forwards;
+}
+.form-description.required {
+    display: none;
+}
+.form-optional {
+    margin-left: 5px;
+}
+.email .visually-hidden {
+    display: none;
+}
+.email ul {
+    position: absolute;
+    background: #fff;
+    z-index: 5;
+    left: 0;
+    right: 0;
+    border: 1px solid #ddd;
+    box-shadow: 1px 2px 2px -1px #2b2b2b96;
+    border-radius: 2px;
+    margin-top: 5px;
+}
+#user-login .form-item {
+    margin: 15px 0 0;
+}
+.calc-description-box * {
+    color: #022bb8;
+}
+.page-apply .rangeslider__handle {
+    background: #fff;
+    color: #fb9116;
+    border: 3px solid #f5f3f3;
+}
+.form-item-terms {
+    margin: 20px 0 0;
+}
+.form-item-terms label {
+    font-size: 10px;
+}
+@media only screen and (min-width: 360px) {
+    .form-item-terms label {
+        font-size: 12px;
+    }
+}
